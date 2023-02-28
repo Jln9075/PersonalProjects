@@ -72,7 +72,7 @@ public class CreepScoreService {
             for(int j = 0; j < participantData.length; j++){
                 String participantName = participantData[j].getSummonerName();
                 if(participantName.equals(summonerName.getUserName())){
-                     creepScoreList.add((double) (participantData[j].getTotalCreepScore())/(participantData[j].getGameLengthInSeconds()/60));
+                     creepScoreList.add((double) (participantData[j].getTotalCreepScore())/(matchDataArray[i].getInfo().getGameDuration()/60));
                 }
             }
 

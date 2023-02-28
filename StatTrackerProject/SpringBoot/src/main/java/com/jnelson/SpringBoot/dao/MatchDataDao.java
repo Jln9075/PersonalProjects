@@ -9,7 +9,7 @@ public class MatchDataDao extends DaoBase {
     public MatchData getRecentMatchData(MatchHistory[] matchHistory){
         MatchData matchData;
 
-        matchData = restTemplate.getForObject(PULL_MATCH_DATA + matchHistory[0].getMatchId() + "?" + TEMPORARY_API_KEY, MatchData.class);
+        matchData = restTemplate.getForObject(PULL_MATCH_DATA + matchHistory[0].getMatchId() + "?" + API_KEY, MatchData.class);
 
         return matchData;
     }
@@ -18,7 +18,7 @@ public class MatchDataDao extends DaoBase {
         MatchData[] matchData = new MatchData[matchHistory.length];
 
         for(int i = 0; i < matchData.length; i++){
-            matchData[i] = restTemplate.getForObject(PULL_MATCH_DATA + matchHistory[i].getMatchId() + "?" + TEMPORARY_API_KEY, MatchData.class);
+            matchData[i] = restTemplate.getForObject(PULL_MATCH_DATA + matchHistory[i].getMatchId() + "?" + API_KEY, MatchData.class);
         }
         return matchData;
     }
