@@ -1,4 +1,7 @@
 {
+  "devDependencies": {
+  "@volar-plugins/vetur": "latest"
+  },
   "name": "hello-world",
   "version": "0.1.0",
   "private": true,
