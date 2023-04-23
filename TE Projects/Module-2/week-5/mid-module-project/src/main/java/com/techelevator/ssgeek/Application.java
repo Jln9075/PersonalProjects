@@ -4,6 +4,7 @@ import com.techelevator.ssgeek.dao.*;
 import com.techelevator.util.SystemInOutConsole;
 import org.apache.commons.dbcp2.BasicDataSource;
 
+
 /**
  * Application is the class that launches the Solar System Geek Administrator by creating
  * the objects needed to interact with the user and file system and passing them to
@@ -17,7 +18,7 @@ public class Application {
         BasicDataSource dataSource = new BasicDataSource();
         dataSource.setUrl("jdbc:postgresql://localhost:5432/SSGeek");
         dataSource.setUsername("postgres");
-        dataSource.setPassword("postgres1");
+        dataSource.setPassword("Jln!651488");
 
         // Controller expects the DAOs it needs to be "injected" in the constructor.
         // Create the DAOs needed by the controller.

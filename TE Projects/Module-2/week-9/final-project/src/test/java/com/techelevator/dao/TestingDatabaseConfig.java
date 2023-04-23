@@ -27,7 +27,7 @@ public class TestingDatabaseConfig {
     private static final String DB_USER =
             Objects.requireNonNullElse(System.getenv("DB_USER"), "postgres");
     private static final String DB_PASSWORD =
-            Objects.requireNonNullElse(System.getenv("DB_PASSWORD"), "postgres1");
+            Objects.requireNonNullElse(System.getenv("DB_PASSWORD"), "Jln!651488");
 
 
     private SingleConnectionDataSource adminDataSource;
@@ -39,7 +39,7 @@ public class TestingDatabaseConfig {
             adminDataSource = new SingleConnectionDataSource();
             adminDataSource.setUrl("jdbc:postgresql://localhost:5432/postgres");
             adminDataSource.setUsername("postgres");
-            adminDataSource.setPassword("postgres1");
+            adminDataSource.setPassword("Jln!651488");
             adminJdbcTemplate = new JdbcTemplate(adminDataSource);
             adminJdbcTemplate.update("DROP DATABASE IF EXISTS \"" + DB_NAME + "\";");
             adminJdbcTemplate.update("CREATE DATABASE \"" + DB_NAME + "\";");

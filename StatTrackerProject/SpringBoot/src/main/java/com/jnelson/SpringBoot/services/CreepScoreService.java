@@ -7,6 +7,7 @@ import com.jnelson.SpringBoot.model.SummonerName;
 import com.jnelson.SpringBoot.model.matchdata.ParticipantData;
 import com.jnelson.SpringBoot.dao.MatchDataDao;
 import org.springframework.stereotype.Component;
+import org.springframework.web.bind.annotation.CrossOrigin;
 
 
 import java.text.DecimalFormat;

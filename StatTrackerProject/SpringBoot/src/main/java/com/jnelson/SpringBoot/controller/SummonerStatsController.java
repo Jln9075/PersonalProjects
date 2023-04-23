@@ -11,8 +11,8 @@ import org.springframework.web.server.ResponseStatusException;
 import java.security.Principal;
 import java.util.ArrayList;
 import java.util.List;
-
 @RestController
+@CrossOrigin
 @RequestMapping(path = "")
 public class SummonerStatsController {
 
@@ -40,7 +40,7 @@ public class SummonerStatsController {
         return returnData;
     }*/
 
-    @RequestMapping( path = "/averageCreepScore/{userInputtedName}/{matchNumber}", method = RequestMethod.GET)
+    @RequestMapping( path = "averageCreepScore/{userInputtedName}/{matchNumber}", method = RequestMethod.GET)
     public ReturnData getAverageCreepScore(@PathVariable String userInputtedName, @PathVariable int matchNumber){
     SummonerName summonerName;
     summonerName = summonerNameService.stringToSummonerName(userInputtedName);
