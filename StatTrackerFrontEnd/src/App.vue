@@ -5,12 +5,19 @@
     </header>
     <main>
       <form>
-        <input type="submit" @click.prevent="setSummonerName" />
-        <input id="userInputtedSummonerName" type="text" />
+        <input type="submit" @click.prevent="getCreepScore" />
+
+        <input
+          type="text"
+          id="userInputtedSummonerName"
+          v-model="summonerName"
+        />
       </form>
-      <article v-for="creepScore in creepScores" :key="creepScore">
-        <gameCard :creepScore="creepScore" />
-      </article>
+      <div v-show="hasSearchButtonBeenPressed">
+        <article v-for="creepScore in creepScores" :key="creepScore">
+          <gameCard :creepScore="creepScore" />
+        </article>
+      </div>
     </main>
 
     <footer>© James Nelson 2023</footer>
@@ -29,23 +36,21 @@ export default {
   },
   data() {
     return {
-      creepScores: [],
+      creepScores: {
+        userAddedSummonerName: String,
+        creepScoreThisMatch: Number,
+      },
       summonerName: "",
+      hasSearchButtonBeenPressed: false,
     };
   },
 
   methods: {
-    getCreepScore(summonerName) {
-      creepScoreService.getCreepScore(summonerName).then((response) => {
-        this.creepScore = response.data;
-        console.log(response.data);
+    getCreepScore() {
+      creepScoreService.getCreepScore(this.summonerName).then((response) => {
+        this.creepScores = response.data;
       });
-    },
-
-    setSummonerName() {
-      this.summonerName = document.getElementById(
-        "userInputtedSummonerName"
-      ).innertext;
+      this.hasSearchButtonBeenPressed = true;
     },
   },
 };

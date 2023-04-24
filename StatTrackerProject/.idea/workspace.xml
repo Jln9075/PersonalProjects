@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="035a9cd3-8427-4e7e-9745-3cdfa610256f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../StatTrackerFrontEnd/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/../StatTrackerFrontEnd/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StatTrackerFrontEnd/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../StatTrackerFrontEnd/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StatTrackerFrontEnd/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../StatTrackerFrontEnd/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/controller/SummonerStatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/controller/SummonerStatsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/services/CreepScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/services/CreepScoreService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../TE Projects/Module-1/week-5/01_Classes_and_Encapsulation/exercise/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../StatTrackerFrontEnd/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../StatTrackerFrontEnd/src/components/GameCard.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
