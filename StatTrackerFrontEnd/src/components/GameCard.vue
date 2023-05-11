@@ -1,7 +1,8 @@
 <template>
   <div id="gameCard">
-    {{ creepScores.userAddedSummonerName }}
-    {{ creepScores.creepScoreThisMatch }}
+    <p>{{ creepScore.userAddedSummonerName }}</p>
+
+    <p>{{ creepScore.creepScoreThisMatch }}</p>
   </div>
 </template>
 
@@ -9,7 +10,10 @@
 export default {
   name: "gameCard",
   props: {
-    creepScores: Object,
+    creepScore: {
+      userAddedSummonerName: String,
+      creepScoreThisMatch: Number,
+    },
   },
 };
 </script>

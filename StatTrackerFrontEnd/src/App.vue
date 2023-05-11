@@ -5,15 +5,15 @@
     </header>
     <main>
       <form>
-        <input type="submit" @click.prevent="getCreepScore" />
-
+        <input type="submit" @click.prevent="getCreepScore()" />
         <input
           type="text"
           id="userInputtedSummonerName"
           v-model="summonerName"
         />
       </form>
-      <div v-show="hasSearchButtonBeenPressed">
+      <div v-if="hasSearchButtonBeenPressed">
+        <p>Hello {{ this.creepScores.userAddedSummonerName }}</p>
         <article v-for="creepScore in creepScores" :key="creepScore">
           <gameCard :creepScore="creepScore" />
         </article>
@@ -49,8 +49,8 @@ export default {
     getCreepScore() {
       creepScoreService.getCreepScore(this.summonerName).then((response) => {
         this.creepScores = response.data;
+        this.hasSearchButtonBeenPressed = true;
       });
-      this.hasSearchButtonBeenPressed = true;
     },
   },
 };
