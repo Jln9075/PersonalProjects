@@ -1,15 +1,17 @@
 <template>
   <div>
+    <gameCard />
     <searchBar>Search A New Summoner Name</searchBar>
-    <p>stats</p>
   </div>
 </template>
 
 <script>
 import searchBar from "@/components/SearchBar.vue";
+import gameCard from "@/components/GameCard.vue";
 export default {
   components: {
     searchBar,
+    gameCard,
   },
 };
 </script>

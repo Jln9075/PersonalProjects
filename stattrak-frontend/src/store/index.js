@@ -1,9 +1,14 @@
 import { createStore } from "vuex";
 
 export default createStore({
-  state: {},
+  state: { summonerName: String, creepScores: Object },
   getters: {},
-  mutations: {},
+  mutations: {
+    SETUP_NEW_GAMECARDVIEW(state, summonerName, creepScores) {
+      state.summonerName = summonerName;
+      state.creepScores = creepScores;
+    },
+  },
   actions: {},
   modules: {},
 });

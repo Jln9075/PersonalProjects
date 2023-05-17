@@ -24,7 +24,6 @@ export default {
         creepScoreThisMatch: Number,
       },
       summonerName: "",
-      hasSearchButtonBeenPressed: false,
     };
   },
   methods: {
@@ -33,7 +32,7 @@ export default {
         .getCreepScore(this.summonerName)
         .then((response) => {
           this.creepScores = response.data;
-          this.hasSearchButtonBeenPressed = true;
+          this.$store.commit("SETUP_NEW_GAMECARDVIEW");
         })
         .catch((error) => alert(error.message));
     },
@@ -49,10 +48,11 @@ form {
 }
 .roundedCorners {
   border-radius: 25px;
-  border: 2px solid #024c69;
+  border: 3px solid #024c69;
   padding: 20px;
   width: 375px;
   height: 10px;
+  margin-bottom: 5px;
 }
 .fancyButton {
   width: 300px;

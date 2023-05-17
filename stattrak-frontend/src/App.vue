@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <header class="fullWidth">
-      <h1>LeagueStatTracker</h1>
+      <router-link to="/" class="title">LeagueStatTracker</router-link>
     </header>
     <main>
       <router-view />
@@ -47,5 +47,9 @@ body {
 html {
   height: 100%;
   background-image: linear-gradient(#92a8d1, #ffffff);
+}
+footer {
+  position: fixed;
+  bottom: 0;
 }
 </style>

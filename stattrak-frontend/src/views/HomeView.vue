@@ -20,5 +20,6 @@ export default {
   height: 200px;
   position: relative;
   padding-left: 40%;
+  padding-bottom: 50px;
 }
 </style>
