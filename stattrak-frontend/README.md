@@ -1,4 +1,4 @@
-# hello-world
+# stattrak-frontend
 
 ## Project setup
 ```

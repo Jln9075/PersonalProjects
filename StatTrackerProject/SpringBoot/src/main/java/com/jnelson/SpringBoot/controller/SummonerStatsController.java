@@ -32,14 +32,6 @@ public class SummonerStatsController {
         return returnData;
     }
 
-   /* @RequestMapping( path = "/averageCreepScore/{userInputtedName}", method = RequestMethod.GET )
-    public ReturnData getAverageCreepScore(@PathVariable String userInputtedName){
-        SummonerName summonerName;
-        summonerName = summonerNameService.stringToSummonerName(userInputtedName);
-        ReturnData returnData = new ReturnData(summonerName.getUserName(), null, creepScoreService.getAverageCreepScoreOverXMatches(summonerName, 1).get(1));
-        return returnData;
-    }*/
-
     @RequestMapping( path = "averageCreepScore/{userInputtedName}/{matchNumber}", method = RequestMethod.GET)
     public ReturnData getAverageCreepScore(@PathVariable String userInputtedName, @PathVariable int matchNumber){
     SummonerName summonerName;
