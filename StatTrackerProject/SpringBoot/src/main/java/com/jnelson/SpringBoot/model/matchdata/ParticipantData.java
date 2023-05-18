@@ -11,16 +11,28 @@ public class ParticipantData {
     String summonerName;
     double creepScorePerMinute;
     int totalCreepScore;
+    String championName;
+    String individualPosition;
 
     public ParticipantData() {
 
     }
 
-    public ParticipantData(int totalMinionsKilled, String summonerName, int neutralMinionsKilled, double gameLengthInSeconds) {
+    public ParticipantData(int totalMinionsKilled, String summonerName, int neutralMinionsKilled, double gameLengthInSeconds, String championName, String individualPosition) {
         this.totalMinionsKilled = totalMinionsKilled;
         this.summonerName = summonerName;
         this.neutralMinionsKilled = neutralMinionsKilled;
         this.gameLengthInSeconds = gameLengthInSeconds;
+        this.championName = championName;
+        this.individualPosition = individualPosition;
+    }
+
+    public String getIndividualPosition() {
+        return individualPosition;
+    }
+
+    public String getChampionName() {
+        return championName;
     }
 
     public String getSummonerName() {

@@ -1,6 +1,8 @@
 <template>
   <div>
-    <searchBar>Search A New Summoner Name</searchBar>
+    <div id="searchBar">
+      <searchBar>Search A New Summoner Name</searchBar>
+    </div>
     <div
       v-for="summonerObject in this.$store.state.gameCardData"
       :key="summonerObject"
@@ -21,4 +23,11 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+#searchBar {
+  height: 200px;
+  position: relative;
+  padding-left: 40%;
+  padding-bottom: 20px;
+}
+</style>

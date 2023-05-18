@@ -3,6 +3,7 @@ package com.jnelson.SpringBoot.services;
 import com.jnelson.SpringBoot.dao.MatchHistoryDao;
 import com.jnelson.SpringBoot.model.MatchData;
 import com.jnelson.SpringBoot.model.MatchHistory;
+import com.jnelson.SpringBoot.model.ReturnData;
 import com.jnelson.SpringBoot.model.SummonerName;
 import com.jnelson.SpringBoot.model.matchdata.ParticipantData;
 import com.jnelson.SpringBoot.dao.MatchDataDao;
@@ -31,7 +32,7 @@ public class CreepScoreService {
         this.matchData = matchData;
     }
 
-    public int getCreepScoreForUser(SummonerName summonerName){
+    public ReturnData getCreepScoreForUser(SummonerName summonerName){
         ParticipantData[] participantData;
         int totalCreepScore = 0;
         MatchHistory[] matchHistoryArray = matchHistoryDao.getMostRecentMatch(summonerName);
@@ -41,10 +42,11 @@ public class CreepScoreService {
         for(int i = 0; i < participantData.length; i++){
             if(participantData[i].getSummonerName().equals(summonerName.getUserName())){
                 totalCreepScore = participantData[i].getTotalCreepScore();
+                return new ReturnData(participantData[i].getSummonerName(), totalCreepScore, null, participantData[i].getChampionName(), participantData[i].getIndividualPosition(), matchData.getInfo().getFormattedGameDuration());
             }
         }
 
-        return totalCreepScore;
+        return null;
     }
 
     public double getCreepScorePerMinuteForUser(SummonerName summonerName){
@@ -56,7 +58,7 @@ public class CreepScoreService {
 
         for(int i = 0; i < participantData.length; i++){
             if(participantData[i].getSummonerName().equals(summonerName.getUserName())){
-                creepScorePerMinute = participantData[i].getTotalCreepScore()/(matchData.getInfo().getGameDuration()/60);
+                creepScorePerMinute = participantData[i].getTotalCreepScore()/(matchData.getInfo().getGameDuration());
             }
         }
         return creepScorePerMinute;
@@ -68,12 +70,14 @@ public class CreepScoreService {
         List<Double> creepScoreList = new ArrayList<>();
         MatchHistory[] matchHistoryArray = matchHistoryDao.getLastXMatches(summonerName, amountOfMatches);
         matchDataArray = matchDataDao.getLastXMatchData(matchHistoryArray);
+
+
         for(int i = 0; i < matchDataArray.length; i++){
             participantData = matchDataArray[i].getInfo().getParticipantData();
             for(int j = 0; j < participantData.length; j++){
                 String participantName = participantData[j].getSummonerName();
                 if(participantName.equals(summonerName.getUserName())){
-                     creepScoreList.add((double) (participantData[j].getTotalCreepScore())/(matchDataArray[i].getInfo().getGameDuration()/60));
+                     creepScoreList.add((double) (participantData[j].getTotalCreepScore())/(matchDataArray[i].getInfo().getGameDuration()));
                 }
             }
 

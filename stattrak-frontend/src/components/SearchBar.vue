@@ -3,7 +3,7 @@
     <input
       type="text"
       id="userInputtedSummonerName"
-      v-model="summonerObject.summonerName"
+      v-model="userInputtedName"
       class="roundedCorners"
     /><br />
     <RouterLink to="/stats"
@@ -19,13 +19,20 @@ export default {
   name: "searchBar",
   data() {
     return {
-      summonerObject: { summonerName: "", totalCreepScore: 0 },
+      summonerObject: {
+        summonerName: "",
+        totalCreepScore: 0,
+        championName: "",
+        individualPosition: "",
+        gameDuration: "",
+      },
+      userInputtedName: "",
     };
   },
   methods: {
     getCreepScore() {
       creepScoreService
-        .getCreepScore(this.summonerObject.summonerName)
+        .getCreepScore(this.userInputtedName)
         .then((response) => {
           this.summonerObject = response.data;
           this.$store.commit("SETUP_NEW_GAMECARDVIEW", this.summonerObject);
