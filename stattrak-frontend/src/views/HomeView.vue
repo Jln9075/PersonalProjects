@@ -22,4 +22,9 @@ export default {
   padding-left: 40%;
   padding-bottom: 50px;
 }
+searchBar {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+}
 </style>

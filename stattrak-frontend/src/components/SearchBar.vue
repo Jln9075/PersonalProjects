@@ -3,7 +3,7 @@
     <input
       type="text"
       id="userInputtedSummonerName"
-      v-model="summonerName"
+      v-model="summonerObject.summonerName"
       class="roundedCorners"
     /><br />
     <RouterLink to="/stats"
@@ -19,20 +19,16 @@ export default {
   name: "searchBar",
   data() {
     return {
-      creepScores: {
-        userAddedSummonerName: String,
-        creepScoreThisMatch: Number,
-      },
-      summonerName: "",
+      summonerObject: { summonerName: "", totalCreepScore: 0 },
     };
   },
   methods: {
     getCreepScore() {
       creepScoreService
-        .getCreepScore(this.summonerName)
+        .getCreepScore(this.summonerObject.summonerName)
         .then((response) => {
-          this.creepScores = response.data;
-          this.$store.commit("SETUP_NEW_GAMECARDVIEW");
+          this.summonerObject = response.data;
+          this.$store.commit("SETUP_NEW_GAMECARDVIEW", this.summonerObject);
         })
         .catch((error) => alert(error.message));
     },
@@ -41,11 +37,6 @@ export default {
 </script>
 
 <style scoped>
-form {
-  margin: 0;
-  position: absolute;
-  top: 50%;
-}
 .roundedCorners {
   border-radius: 25px;
   border: 3px solid #024c69;

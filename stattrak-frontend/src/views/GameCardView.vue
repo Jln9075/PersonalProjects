@@ -1,7 +1,12 @@
 <template>
   <div>
-    <gameCard />
     <searchBar>Search A New Summoner Name</searchBar>
+    <div
+      v-for="summonerObject in this.$store.state.gameCardData"
+      :key="summonerObject"
+    >
+      <gameCard :summonerObject="summonerObject" />
+    </div>
   </div>
 </template>
 
