@@ -13,7 +13,7 @@ public class Main {
         String first = strings[0];
 
         for(int i = 1; i < strings.length; i++){
-            if(strings[i].compareTo(first) < 0){
+            if(strings[i].length() < first.length()){
                 first = strings[i];
             }
         }
@@ -22,9 +22,19 @@ public class Main {
     public static String longestCommonPrefix(String[] strs) {
         String prefix = "";
         int largestPossible = smallestWord(strs);
+        boolean isPrefixAccurate = false;
 
-        for(int i = 0; i < strs.length; i++){
-
+        while(isPrefixAccurate == false){
+            prefix = strs[0].substring(0, largestPossible);
+            for(int i = 0; i < strs.length; i++){
+                if(!prefix.equals(strs[i].substring(0, largestPossible))){
+                    i = 0;
+                    largestPossible -= 1;
+                    break;
+                } else if(i == strs.length - 1){
+                    isPrefixAccurate = true;
+                }
+            }
         }
 
         return prefix;
