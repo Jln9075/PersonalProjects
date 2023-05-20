@@ -5,11 +5,30 @@ import java.util.Set;
 
 public class Main {
     public static void main(String[] args) {
-
-        System.out.println(longestPalindrome("mozblnzrszxtdjmwvgeovtxoftpcsbnjryogrnibiiqfexljlfikfcxvrzrpfvugtdjrlkgvkmrqgeltifdehsewpdhpjpnuobmuozopmglnocqcozvratjpzrklexqdeuvvzfjkuknkkoynxptrgtzadmpfdkphfjhdulhzncoofmmrwqjxeyhodfavcgpjmohohuztezdxegqzbaaobzrqptuqsvwnfdneyccbkgkjafztytwuppvleukdqqzyeiltsvoqbxupbasiityganofxijucwzqgtdyxljociwwjdrnfnfbwyymmvbuvbrdnvcubzkohknbsneutrcukfiqqhfviqdsbtrldipenqifdcrenpuyaqvkparycksurhbtjppwhezbcgocamurdawimkzzkmiwadrumacogcbzehwppjtbhruskcyrapkvqayupnercdfiqnepidlrtbsdqivfhqqifkucrtuensbnkhokzbucvndrbvubvmmyywbfnfnrdjwwicojlxydtgqzwcujixfonagytiisabpuxbqovstlieyzqqdkuelvppuwtytzfajkgkbccyendfnwvsqutpqrzboaabzqgexdzetzuhohomjpgcvafdohyexjqwrmmfoocnzhludhjfhpkdfpmdaztgrtpxnyokknkukjfzvvuedqxelkrzpjtarvzocqconlgmpozoumbounpjphdpweshedfitlegqrmkvgklrjdtguvfprzrvxcfkifljlxefqiibinrgoyrjnbscptfoxtvoegvwmjdtxzsrznlbzom"));
+        String[] words = {"flower","flow","flight"};
+        System.out.println(longestCommonPrefix(words));
 
     }
+    public static int smallestWord(String[] strings){
+        String first = strings[0];
 
+        for(int i = 1; i < strings.length; i++){
+            if(strings[i].compareTo(first) < 0){
+                first = strings[i];
+            }
+        }
+        return first.length();
+    }
+    public static String longestCommonPrefix(String[] strs) {
+        String prefix = "";
+        int largestPossible = smallestWord(strs);
+
+        for(int i = 0; i < strs.length; i++){
+
+        }
+
+        return prefix;
+    }
     public static String longestPalindrome(String s) {
         String longestSubstring = "";
 

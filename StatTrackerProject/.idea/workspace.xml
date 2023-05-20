@@ -4,15 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="035a9cd3-8427-4e7e-9745-3cdfa610256f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/controller/SummonerStatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/controller/SummonerStatsController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/ReturnData.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/ReturnData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/matchdata/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/matchdata/Info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/matchdata/ParticipantData.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/matchdata/ParticipantData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/services/CreepScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/services/CreepScoreService.java" afterDir="false" />
-    </list>
+    <list default="true" id="035a9cd3-8427-4e7e-9745-3cdfa610256f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
