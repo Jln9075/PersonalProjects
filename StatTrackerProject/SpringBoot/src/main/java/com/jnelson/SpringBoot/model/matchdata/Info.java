@@ -9,15 +9,10 @@ public class Info {
     @JsonProperty("participants")
     ParticipantData[] participantData;
     double gameDuration;
-    DecimalFormat dcf = new DecimalFormat("###.##");
 
     public Info() {
     }
 
-    public Info(ParticipantData[] participantData, double gameDuration) {
-        this.participantData = participantData;
-        this.gameDuration = gameDuration;
-    }
 
     public ParticipantData[] getParticipantData() {
         return participantData;

@@ -4,7 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="035a9cd3-8427-4e7e-9745-3cdfa610256f" name="Changes" comment="" />
+    <list default="true" id="035a9cd3-8427-4e7e-9745-3cdfa610256f" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/controller/SummonerStatsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/controller/SummonerStatsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/dao/MatchDataDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/dao/MatchDataDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/dao/MatchHistoryDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/dao/MatchHistoryDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/ReturnData.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/ReturnData.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/matchdata/Info.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/matchdata/Info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/services/CreepScoreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/SpringBoot/src/main/java/com/jnelson/SpringBoot/services/CreepScoreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/components/SearchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/components/SearchBar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/views/GameCardView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/views/GameCardView.vue" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -121,8 +132,8 @@
     <list>
       <item itemvalue="Application.App" />
       <item itemvalue="Application.StatTrackingApplication" />
-      <item itemvalue="Application.DemoApplication" />
       <item itemvalue="Application.Application" />
+      <item itemvalue="Application.DemoApplication" />
     </list>
     <recent_temporary>
       <list>

@@ -19,13 +19,15 @@ export default {
   name: "searchBar",
   data() {
     return {
-      summonerObject: {
-        summonerName: "",
-        totalCreepScore: 0,
-        championName: "",
-        individualPosition: "",
-        gameDuration: "",
-      },
+      returnData: [
+        {
+          summonerName: "",
+          totalCreepScore: 0,
+          championName: "",
+          individualPosition: "",
+          gameDuration: "",
+        },
+      ],
       userInputtedName: "",
     };
   },
@@ -34,8 +36,11 @@ export default {
       creepScoreService
         .getCreepScore(this.userInputtedName)
         .then((response) => {
-          this.summonerObject = response.data;
-          this.$store.commit("SETUP_NEW_GAMECARDVIEW", this.summonerObject);
+          response.data.forEach((element) => {
+            this.returnData.push(element);
+          });
+          console.log(response.data);
+          this.$store.commit("SETUP_NEW_GAMECARDVIEW", this.returnData);
         })
         .catch((error) => alert(error.message));
     },

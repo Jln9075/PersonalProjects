@@ -4,7 +4,7 @@
       <searchBar>Search A New Summoner Name</searchBar>
     </div>
     <div
-      v-for="summonerObject in this.$store.state.gameCardData"
+      v-for="summonerObject in this.$store.state.gameCardData[0]"
       :key="summonerObject"
     >
       <gameCard :summonerObject="summonerObject" />

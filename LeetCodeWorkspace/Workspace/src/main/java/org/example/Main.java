@@ -9,6 +9,18 @@ public class Main {
 
     }
 
+    public static int[] KthLargest(int k, int[] nums) {
+
+
+
+
+        return nums;
+    }
+
+    public int add(int val) {
+        return 0;
+    }
+
     public static int[] topKFrequent(int[] nums, int k) {
         TreeMap<Integer, Integer> tree = new TreeMap<>();
         int[] array = new int[k];
