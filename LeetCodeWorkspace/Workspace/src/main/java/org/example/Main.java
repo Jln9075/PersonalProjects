@@ -1,13 +1,40 @@
 package org.example;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        String[] words = {"flower","flow","flight"};
-        System.out.println(longestCommonPrefix(words));
+        int[] nums = {1, 1, 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 5, 5};
+        System.out.println(topKFrequent(nums, 2)[1]);
 
+    }
+
+    public static int[] topKFrequent(int[] nums, int k) {
+        TreeMap<Integer, Integer> tree = new TreeMap<>();
+        int[] array = new int[k];
+
+        for(int i = 0; i < nums.length; i++){
+            if(tree.containsKey(nums[i])){
+                tree.put(nums[i], tree.get(nums[i])+1);
+            } else {
+                tree.put(nums[i], 1);
+            }
+        }
+
+        for(int i = 0; i < k; i++){
+            Integer workingValue = 0;
+            Integer key = 0;
+            for (Map.Entry<Integer, Integer> entry : tree.entrySet()) {
+                if(entry.getValue() > workingValue){
+                    workingValue = entry.getValue();
+                    key = entry.getKey();
+                }
+            }
+            tree.remove(key);
+            array[i] = key;
+        }
+
+        return array;
     }
     public static int smallestWord(String[] strings){
         String first = strings[0];
