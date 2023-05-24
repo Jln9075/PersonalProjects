@@ -35,67 +35,24 @@ public class CreepScoreService {
     public ReturnData[] getCreepScoreForUser(SummonerName summonerName, int amountOfMatches){
         ParticipantData[] participantData;
         ReturnData[] returnData = new ReturnData[amountOfMatches];
-        int totalCreepScore = 0;
-
 
         MatchHistory[] matchHistoryArray = matchHistoryDao.getLastXMatches(summonerName, amountOfMatches);
         matchData = matchDataDao.getLastXMatchData(matchHistoryArray);
 
-//TODO rewrite program to allow multiple matches to get searched instead of 1
-        for(int i = 0; i < 10; i++){
-            participantData = matchData.get(matchHistoryArray[0]).getInfo().getParticipantData();
-            if(participantData[i].getSummonerName().equals(summonerName.getUserName())){
-                totalCreepScore = participantData[i].getTotalCreepScore();
-                returnData[0] = new ReturnData(participantData[i].getSummonerName(),
-                        totalCreepScore,
-                        participantData[i].getChampionName(),
-                        participantData[i].getIndividualPosition(),
-                        matchData.get(matchHistoryArray[0]).getInfo().getFormattedGameDuration());
-                break;
+        for(int matchCount = 0; matchCount < amountOfMatches; matchCount++){
+            for(int participantcount = 0; participantcount < 10; participantcount++){
+                participantData = matchData.get(matchHistoryArray[matchCount]).getInfo().getParticipantData();
+                    if(participantData[participantcount].getSummonerName().equals(summonerName.getUserName())) {
+                        returnData[matchCount] = new ReturnData(participantData[participantcount].getSummonerName(), participantData[participantcount].getTotalCreepScore(),
+                            participantData[participantcount].getChampionName(),
+                            participantData[participantcount].getIndividualPosition(),
+                            matchData.get(matchHistoryArray[matchCount]).getInfo().getFormattedGameDuration());
+                        break;
+                }
             }
         }
 
         return returnData;
     }
-
-//
-//    public double getCreepScorePerMinuteForUser(SummonerName summonerName){
-//        ParticipantData[] participantData;
-//        double creepScorePerMinute = 0.00;
-//        MatchHistory[] matchHistoryArray = matchHistoryDao.getMostRecentMatch(summonerName);
-//        matchData = matchDataDao.getRecentMatchData(matchHistoryArray);
-//        participantData = matchData.getInfo().getParticipantData();
-//
-//        for(int i = 0; i < participantData.length; i++){
-//            if(participantData[i].getSummonerName().equals(summonerName.getUserName())){
-//                creepScorePerMinute = participantData[i].getTotalCreepScore()/(matchData.getInfo().getGameDuration());
-//            }
-//        }
-//        return creepScorePerMinute;
-//    }
-//
-//    public List<Double> getAverageCreepScoreOverXMatches(SummonerName summonerName, int amountOfMatches){
-//        MatchData[] matchDataArray;
-//        ParticipantData[] participantData;
-//        List<Double> creepScoreList = new ArrayList<>();
-//        MatchHistory[] matchHistoryArray = matchHistoryDao.getLastXMatches(summonerName, amountOfMatches);
-//        matchDataArray = matchDataDao.getLastXMatchData(matchHistoryArray);
-//
-////TODO  Investigate rewriting this method using a hashmap instead of the first for loop
-//        for(int i = 0; i < matchDataArray.length; i++){
-//            participantData = matchDataArray[i].getInfo().getParticipantData();
-//            for(int j = 0; j < participantData.length; j++){
-//                String participantName = participantData[j].getSummonerName();
-//                if(participantName.equals(summonerName.getUserName())){
-//                     creepScoreList.add((double) (participantData[j].getTotalCreepScore())/(matchDataArray[i].getInfo().getGameDuration()));
-//                }
-//            }
-//
-//        }
-//
-//        return creepScoreList;
-//    }
-
-
 
 }

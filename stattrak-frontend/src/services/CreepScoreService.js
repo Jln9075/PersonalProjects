@@ -5,11 +5,7 @@ const http = axios.create({
 });
 
 export default {
-  getCreepScore(summonerName) {
-    return http.get(`/creepScore/${summonerName}`);
-  },
-
-  getAverageCreepScore(summonerName) {
-    return http.get(`/averageCreepScore/${summonerName}`);
+  getCreepScore(summonerName, searchQuantity) {
+    return http.get(`/creepScore/${summonerName}/${searchQuantity}`);
   },
 };

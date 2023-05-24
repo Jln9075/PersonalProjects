@@ -1,10 +1,10 @@
 <template>
   <div id="gameCard">
-    <p>{{ summonerObject.summonerName }}</p>
-    <p>{{ summonerObject.totalCreepScore }}</p>
-    <p>{{ summonerObject.championName }}</p>
-    <p>{{ summonerObject.individualPosition }}</p>
-    <p>{{ summonerObject.gameDuration }}</p>
+    <p>Name: {{ summonerObject.summonerName }}</p>
+    <p>Total Creep Score: {{ summonerObject.totalCreepScore }}</p>
+    <p>Champion: {{ summonerObject.championName }}</p>
+    <p>Position: {{ summonerObject.individualPosition }}</p>
+    <p>Game Length: {{ summonerObject.gameDuration }}</p>
   </div>
 </template>
 
@@ -18,8 +18,8 @@ export default {
 
 <style scoped>
 #gameCard {
-  background-color: white;
-  width: 150px;
+  background-color: rgb(161, 187, 236);
+  width: 200px;
   height: auto;
   padding-left: 10px;
   margin: 20px;

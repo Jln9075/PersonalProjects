@@ -3,12 +3,15 @@
     <div id="searchBar">
       <searchBar>Search A New Summoner Name</searchBar>
     </div>
-    <div
-      v-for="summonerObject in this.$store.state.gameCardData[0]"
-      :key="summonerObject"
-    >
-      <gameCard :summonerObject="summonerObject" />
-    </div>
+    <article>
+      <div
+        class="flexbox"
+        v-for="summonerObject in this.$store.state.gameCardData"
+        :key="summonerObject"
+      >
+        <gameCard class="gameCard" :summonerObject="summonerObject" />
+      </div>
+    </article>
   </div>
 </template>
 
@@ -29,5 +32,11 @@ export default {
   position: relative;
   padding-left: 40%;
   padding-bottom: 20px;
+}
+.gameCard {
+  width: fit-content;
+}
+.flexbox {
+  display: inline-flex;
 }
 </style>
