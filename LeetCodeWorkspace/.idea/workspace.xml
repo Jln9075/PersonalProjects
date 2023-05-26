@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f0880b5e-163f-4cbc-b6d3-7083c2b5e09d" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../RecipeSaver/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Workspace/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/Workspace/src/main/java/org/example/Main.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../StatTrackerProject/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../StatTrackerProject/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../StatTrackerProject/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/ReturnData.java" beforeDir="false" afterPath="$PROJECT_DIR$/../StatTrackerProject/SpringBoot/src/main/java/com/jnelson/SpringBoot/model/ReturnData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/components/GameCard.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/components/GameCard.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/components/SearchBar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/components/SearchBar.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/store/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/views/GameCardView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/views/GameCardView.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../stattrak-frontend/src/views/HomeView.vue" beforeDir="false" afterPath="$PROJECT_DIR$/../stattrak-frontend/src/views/HomeView.vue" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,7 +29,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/Dev Machine/Workspace/PersonalProjects/LeetCodeWorkspace"
+    "last_opened_file_path": "C:/Users/Dev Machine/Workspace/PersonalProjects/LeetCodeWorkspace/Workspace"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />

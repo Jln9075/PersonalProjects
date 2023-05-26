@@ -1,26 +1,38 @@
 package org.example;
 
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        int[] nums = {1, 1, 1, 1, 2, 2, 2, 3, 4, 5, 5, 5, 5, 5, 5};
-        System.out.println(topKFrequent(nums, 2)[1]);
+
+        int[] nums = new int[]{1, 2, 3, 4};
+
+        System.out.println(plusOne(nums));
 
     }
 
-    public static int[] KthLargest(int k, int[] nums) {
+    public static int[] plusOne(int[] digits) {
 
+        int highestNine = -1;
 
+        for(int i = digits.length - 1; digits[i] == 9; i--){
+            digits[i] = 0;
+            highestNine = i;
+        }
+        if(highestNine == 0){
+            int[] intArray = new int[digits.length + 1];
+            Arrays.fill(intArray, 0);
+            intArray[0] = 1;
+        }
+        else if(highestNine != -1){
+            digits[highestNine-1] += 1;
+        } else {
+            digits[digits.length-1] += 1;
+        }
 
-
-        return nums;
+        return digits;
     }
-
-    public int add(int val) {
-        return 0;
-    }
-
     public static int[] topKFrequent(int[] nums, int k) {
         TreeMap<Integer, Integer> tree = new TreeMap<>();
         int[] array = new int[k];
