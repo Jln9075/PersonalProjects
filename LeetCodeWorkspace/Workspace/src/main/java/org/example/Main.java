@@ -6,10 +6,52 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        int[] nums = new int[]{1, 2, 3, 4};
+        String a = "1";
+        String b = "11";
 
-        System.out.println(plusOne(nums));
 
+        System.out.println(addBinary(a, b));
+
+    }
+
+    public static String addBinary(String a, String b) {
+        while(a.length() != b.length()){
+            if(a.length() > b.length()){
+                b = "0" + b;
+            } else{
+                a = "0" + a;
+            }
+        }
+
+        String finalNum = "";
+
+
+        for(int workingChar = a.length() -1; 0 < workingChar; workingChar--){
+
+            if(a.charAt(workingChar) != b.charAt(workingChar)){
+                finalNum = "1" + finalNum;
+            } else if (a.charAt(workingChar) == '1') {
+
+            }
+        }
+
+        return finalNum;
+    }
+
+    public static int removeElement(int[] nums, int val) {
+        int totalNonVal = nums.length;
+
+        for(int i = 0; i < nums.length; i++){
+            if(nums[i] == val){
+                nums[i] = 101;
+                totalNonVal -= 1;
+            }
+        }
+
+        Arrays.sort(nums);
+
+
+        return totalNonVal;
     }
 
     public static int[] plusOne(int[] digits) {
