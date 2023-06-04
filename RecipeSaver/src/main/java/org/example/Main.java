@@ -1,7 +1,7 @@
 package org.example;
 
 import org.apache.commons.dbcp2.BasicDataSource;
-public class Main {
+public class    Main {
     public static void main(String[] args) {
 
         BasicDataSource dataSource = new BasicDataSource();

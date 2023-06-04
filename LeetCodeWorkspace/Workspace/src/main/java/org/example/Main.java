@@ -6,12 +6,26 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        String a = "1";
-        String b = "11";
+        String reverseWord = "The quick brown fox jumps over the lazy dog.";
 
 
-        System.out.println(addBinary(a, b));
+        System.out.println(reverseWords(reverseWord));
 
+    }
+
+    public static String reverseWords(final String original) {
+        String word = "";
+        String phrase = "";
+        for(int i = original.length() - 1; i >= -1; i--){
+            if(i == -1 || original.charAt(i) == ' ') {
+                new StringBuilder(word).reverse().toString();
+            } else{
+            }
+        }
+
+
+
+        return phrase;
     }
 
     public static String addBinary(String a, String b) {
