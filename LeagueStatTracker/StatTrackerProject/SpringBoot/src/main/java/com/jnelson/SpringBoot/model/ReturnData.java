@@ -7,13 +7,13 @@ import java.util.List;
 
 public class ReturnData {
 
-    String summonerName;
-    Integer totalCreepScore = null;
+    private String summonerName;
+    private Integer totalCreepScore = null;
     @JsonInclude(JsonInclude.Include.NON_NULL)
-    List<Double> averageCreepScore = null;
-    String championName = null;
-    String individualPosition = null;
-    String gameDuration;
+    private List<Double> averageCreepScore = null;
+    private String championName = null;
+    private String individualPosition = null;
+    private String gameDuration;
 
     public ReturnData(String summonerName, Integer totalCreepScore, String championName, String individualPosition, String gameDuration) {
         this.summonerName = summonerName;

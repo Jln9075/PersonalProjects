@@ -4,15 +4,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class ParticipantData {
 
-    int neutralMinionsKilled;
-    int totalMinionsKilled;
+    private int neutralMinionsKilled;
+    private int totalMinionsKilled;
     @JsonProperty("gameLength")
-    double gameLengthInSeconds;
-    String summonerName;
-    double creepScorePerMinute;
-    int totalCreepScore;
-    String championName;
-    String individualPosition;
+    private double gameLengthInSeconds;
+    private String summonerName;
+    private double creepScorePerMinute;
+    private int totalCreepScore;
+    private String championName;
+    private String individualPosition;
 
     public ParticipantData() {
 

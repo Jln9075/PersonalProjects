@@ -4,8 +4,8 @@ import com.jnelson.SpringBoot.model.matchdata.Info;
 import com.jnelson.SpringBoot.model.matchdata.MetaData;
 
 public class MatchData {
-    MetaData metaData;
-    Info info;
+    private MetaData metaData;
+    private Info info;
 
     public MatchData(){
 

@@ -6,9 +6,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class SummonerName {
 
 
-    String puuid;
+    private String puuid;
     @JsonProperty("name")
-    String userName;
+    private String userName;
 
 
     public SummonerName(){

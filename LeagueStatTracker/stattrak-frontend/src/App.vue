@@ -20,14 +20,23 @@ export default {
 </script>
 
 <style>
-h1 {
-  margin: 0px;
+a:active,
+a:hover,
+a:visited,
+a:link {
+  text-decoration: none;
+  color: rgb(218, 241, 7);
+  font-size: 5em;
 }
 
 header {
-  color: black;
-  background-color: #92a8d1;
+  background-color: #082a6e;
   text-align: center;
+  margin-bottom: 3%;
+}
+
+h1 {
+  margin: 0px;
 }
 
 .fullWidth {
@@ -46,7 +55,7 @@ body {
 
 html {
   height: 100%;
-  background-image: linear-gradient(#92a8d1, #ffffff);
+  background-image: linear-gradient(#001c53, #aaaff3);
 }
 footer {
   position: fixed;

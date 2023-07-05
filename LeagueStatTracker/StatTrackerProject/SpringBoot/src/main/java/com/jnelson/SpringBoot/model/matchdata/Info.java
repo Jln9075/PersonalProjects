@@ -7,8 +7,8 @@ import java.util.concurrent.TimeUnit;
 
 public class Info {
     @JsonProperty("participants")
-    ParticipantData[] participantData;
-    double gameDuration;
+    private ParticipantData[] participantData;
+    private double gameDuration;
 
     public Info() {
     }

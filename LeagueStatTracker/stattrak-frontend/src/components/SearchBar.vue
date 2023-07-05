@@ -5,6 +5,7 @@
       id="userInputtedSummonerName"
       v-model="userInputtedName"
       class="roundedCorners"
+      placeholder="Username"
     />
     <input
       type="number"

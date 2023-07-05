@@ -1,7 +1,7 @@
 package com.jnelson.SpringBoot.model;
 
 public class MatchHistory {
-    String matchId;
+    private String matchId;
 
     public MatchHistory(String matchId) {
         this.matchId = matchId;
