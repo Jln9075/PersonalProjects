@@ -22,13 +22,4 @@ public class MatchData {
         return info;
     }
 
-
-
-    @Override
-    public String toString() {
-        return "MatchData{" +
-                "metaData=" + metaData +
-                ", info=" + info +
-                '}';
-    }
 }

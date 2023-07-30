@@ -6,13 +6,35 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        int narcissisticNum = 153;
+        int[] height = new int[]{1,8,6,2,5,4,8,3,7};
 
-
-        System.out.println(isNarcissistic(narcissisticNum));
+        System.out.println(maxArea(height));
 
     }
 
+
+    public static int maxArea(int[] height) {
+        int areaOfContainer = 0;
+        int leftCounter = 0;
+
+
+        for(int i = height.length - 1; i > leftCounter; i--){
+            int workingArea = (Math.min(height[i], height[leftCounter])) * (i - leftCounter);
+
+            if(areaOfContainer < workingArea){
+                areaOfContainer = workingArea;
+            }
+
+            int movingCounter = (Math.min(height[leftCounter], height[i]));
+            if(movingCounter == height[leftCounter]) {
+                leftCounter++;
+                i++;
+            }
+        }
+
+
+        return areaOfContainer;
+    }
 
     public static boolean isNarcissistic(int number) {
         final String numString = String.valueOf(number);
