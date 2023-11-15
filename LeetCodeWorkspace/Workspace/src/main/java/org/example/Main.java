@@ -6,12 +6,31 @@ import java.util.*;
 public class Main {
     public static void main(String[] args) {
 
-        int[] height = new int[]{1,8,6,2,5,4,8,3,7};
+        int[] nums1 = new int[]{1,2,3,0,0,0};
+        int[] nums2 = new int[]{2,5,6};
+        int m = 3;
+        int n = 3;
 
-        System.out.println(maxArea(height));
+        System.out.println(merge(nums1, m, nums2, n));
 
     }
 
+    public static int[] merge(int[] nums1, int m, int[] nums2, int n) {
+
+        int counter = 0;
+
+        for(int i = m; i < m + n; i++){
+            nums1[i] = nums2[counter];
+            counter++;
+        }
+        Arrays.sort(nums1);
+
+        for(int j = 0; j < nums1.length; j++) {
+            System.out.println(nums1[j]);
+        }
+
+        return nums1;
+    }
 
     public static int maxArea(int[] height) {
         int areaOfContainer = 0;
