@@ -3,7 +3,7 @@
     <p>Name: {{ summonerObject.summonerName }}</p>
     <p>Total Creep Score: {{ summonerObject.totalCreepScore }}</p>
     <p>Champion: {{ summonerObject.championName }}</p>
-    <p>Position: {{ summonerObject.individualPosition }}</p>
+    <p id="position">Position: {{ summonerObject.individualPosition }}</p>
     <p>Game Length: {{ summonerObject.gameDuration }}</p>
   </div>
 </template>

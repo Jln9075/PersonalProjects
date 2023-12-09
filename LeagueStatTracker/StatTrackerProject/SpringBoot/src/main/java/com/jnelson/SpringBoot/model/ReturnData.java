@@ -40,6 +40,8 @@ public class ReturnData {
     }
 
     public String getIndividualPosition() {
+        individualPosition = individualPosition.substring(0,1) + individualPosition.substring(1).toLowerCase();
+
         return individualPosition;
     }
     public String getGameDuration() {
