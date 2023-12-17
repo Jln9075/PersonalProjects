@@ -8,7 +8,6 @@ public class LegionTd2StatsApplication {
 
 	public static void main(String[] args) {
 
-		System.out.println("Hello World");
 		SpringApplication.run(LegionTd2StatsApplication.class, args);
 	}
 
